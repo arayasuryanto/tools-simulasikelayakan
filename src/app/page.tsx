@@ -145,16 +145,23 @@ export default function Home() {
         <header className="bg-white rounded-xl shadow-lg border border-gray-100 mb-8 overflow-hidden">
           <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 px-8 py-6">
             <div className="flex flex-col items-center">
-              {/* Logo */}
+              {/* Logo - Working Local Version */}
               <div className="mb-4">
-                <img
-                  src="https://simulasikelayakan.online/logo-kelayakan.png"
-                  alt="Simulasi Kelayakan Logo"
-                  className="h-16 w-auto rounded-lg bg-white p-2 shadow-md"
-                  onError={(e) => {
-                    e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMzYjgyZjYiLz4KPHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIxNiIgeT0iMTYiPgo8cGF0aCBkPSJNOSAySDVhMiAyIDAgMCAwLTIgMnYxNmEyIDIgMCAwIDAgMiAyaDRhMSAxIDAgMCAwIDEtMWg0djJhMSAxIDAgMCAwIDEtMWg0YTIgMiAwIDAgMCAyLTJWNGEyIDIgMCAwIDAtMi0yek0xMSA1SDd2MTRoNFY1ek0xOSAyYy0xLjEwNSAwLTItLjg5NS0yLTJzLjg5NS0yIDItMiAyIC44OTUgMiAyIDItLjg5NS0yLTItMnptMCA2Yy0xLjEwNSAwLTItLjg5NS0yLTJzLjg5NS0yIDItMiAyIC44OTUgMiAyIDItLjg5NS0yLTItMnptMCA2Yy0xLjEwNSAwLTItLjg5NS0yLTJzLjg5NS0yIDItMiAyIC44OTUgMiAyIDItLjg5NS0yLTItMnYtMnoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo8L3N2Zz4K';
-                  }}
-                />
+                <div className="h-16 w-auto rounded-lg bg-white p-3 shadow-md flex items-center justify-center">
+                  {/* Using inline SVG as working logo */}
+                  <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="64" height="64" rx="16" fill="url(#logoGradient)"/>
+                    <defs>
+                      <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#3b82f6"/>
+                        <stop offset="100%" style="stop-color:#6366f1"/>
+                      </linearGradient>
+                    </defs>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" x="16" y="16">
+                      <path d="M9 2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4a1 1 0 0 0 1-1h4v2a1 1 0 0 0 1 1h4a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2h-4a2 2 0 0 0-2-2zM11 5H7v14h4V5zM19 2c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm0 6c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm0 6c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2v-6z" fill="white"/>
+                    </svg>
+                  </svg>
+                </div>
               </div>
 
               {/* Title and Subtitle */}
