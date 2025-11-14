@@ -141,18 +141,60 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">
-            📊 Feasibility Analysis Tool
-          </h1>
-          <p className="text-gray-600">
-            Professional Investment Analysis and Project Evaluation Platform
-          </p>
-          <div className="text-sm text-gray-500 mt-2">
-            Auto-saved at {lastSave.toLocaleTimeString('id-ID')}
+        {/* Professional Header */}
+        <header className="bg-white rounded-xl shadow-lg border border-gray-100 mb-8 overflow-hidden">
+          <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 px-8 py-6">
+            <div className="flex flex-col items-center">
+              {/* Logo */}
+              <div className="mb-4">
+                <img
+                  src="https://simulasikelayakan.online/logo-kelayakan.png"
+                  alt="Simulasi Kelayakan Logo"
+                  className="h-16 w-auto rounded-lg bg-white p-2 shadow-md"
+                  onError={(e) => {
+                    e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMzYjgyZjYiLz4KPHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIxNiIgeT0iMTYiPgo8cGF0aCBkPSJNOSAySDVhMiAyIDAgMCAwLTIgMnYxNmEyIDIgMCAwIDAgMiAyaDRhMSAxIDAgMCAwIDEtMWg0djJhMSAxIDAgMCAwIDEtMWg0YTIgMiAwIDAgMCAyLTJWNGEyIDIgMCAwIDAtMi0yek0xMSA1SDd2MTRoNFY1ek0xOSAyYy0xLjEwNSAwLTItLjg5NS0yLTJzLjg5NS0yIDItMiAyIC44OTUgMiAyIDItLjg5NS0yLTItMnptMCA2Yy0xLjEwNSAwLTItLjg5NS0yLTJzLjg5NS0yIDItMiAyIC44OTUgMiAyIDItLjg5NS0yLTItMnptMCA2Yy0xLjEwNSAwLTItLjg5NS0yLTJzLjg5NS0yIDItMiAyIC44OTUgMiAyIDItLjg5NS0yLTItMnYtMnoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo8L3N2Zz4K';
+                  }}
+                />
+              </div>
+
+              {/* Title and Subtitle */}
+              <div className="text-center">
+                <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  Simulasi Kelayakan
+                </h1>
+                <p className="text-blue-100 text-lg font-medium">
+                  Professional Investment Analysis & Financial Assessment Platform
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+
+          {/* Status Bar */}
+          <div className="bg-gray-50 px-8 py-3 border-t border-gray-200">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium text-gray-700">
+                  Real-time Financial Analysis
+                </span>
+              </div>
+              <div className="flex items-center space-x-4 text-sm text-gray-600">
+                <div className="flex items-center space-x-1">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span>Advanced Tools</span>
+                </div>
+                <div className="flex items-center space-x-1">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Auto-saved at {lastSave.toLocaleTimeString('id-ID')}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
 
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Sidebar */}
